@@ -11,7 +11,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline"
 interface NavbarProps {}
 
 const Navbar = ({}: NavbarProps) => {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
   return (
     <header className="h-[82px] flex items-center">
@@ -61,33 +61,34 @@ const Navbar = ({}: NavbarProps) => {
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="#"
                   className="menu-link gap-1 hover:bg-transparent"
+                  onClick={() => setOpen(true)}
                 >
                   <Avatar imgSrc="/images/us-flag.svg" /> EN
                 </Link>
                 <Transition.Root show={open} as={Fragment}>
                   <Dialog as="div" className="relative z-10" onClose={setOpen}>
-                    <div className="fixed inset-0" />
+                    <div className="fixed inset-0 bg-[rgba(14,15,12,.4)]" />
 
                     <div className="fixed inset-0 overflow-hidden">
                       <div className="absolute inset-0 overflow-hidden">
                         <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
                           <Transition.Child
                             as={Fragment}
-                            enter="transform transition ease-in-out duration-500 sm:duration-700"
+                            enter="transform transition ease-in-out"
                             enterFrom="translate-x-full"
                             enterTo="translate-x-0"
-                            leave="transform transition ease-in-out duration-500 sm:duration-700"
+                            leave="transform transition ease-in-out"
                             leaveFrom="translate-x-0"
                             leaveTo="translate-x-full"
                           >
-                            <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
+                            <Dialog.Panel className="pointer-events-auto w-screen max-w-xl">
                               <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
                                 <div className="px-4 sm:px-6">
                                   <div className="flex items-start justify-between">
                                     <Dialog.Title className="text-base font-semibold leading-6 text-gray-900">
-                                      Panel title
+                                      Select location and language
                                     </Dialog.Title>
                                     <div className="ml-3 flex h-7 items-center">
                                       <button
