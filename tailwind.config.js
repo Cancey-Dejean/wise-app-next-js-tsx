@@ -12,10 +12,19 @@ module.exports = {
         title: ["Alfa Slab One", "cursive"],
       },
       colors: {
-        body: "rgb(10, 5, 23)",
+        "color-body": "rgb(69, 71, 69)",
+        "color-primary": "#9fe870",
+        "color-primary-hover": "#80e142",
+        "color-green": "#163300",
+        "color-green-hover": "#0d1f00",
+        "color-neutral": "rgba(22,51,0,.078)",
+        "color-neutral-hover": "rgba(22,51,0,.078)",
+      },
+      transitionDuration: {
+        15: ".15s",
       },
       dropShadow: {
-        "text-shadow": "rgba(10, 5, 23, 0.12) 0px 4px 8px",
+        // "text-shadow": "rgba(10, 5, 23, 0.12) 0px 4px 8px",
       },
       backgroundImage: {
         "nav-gradient":

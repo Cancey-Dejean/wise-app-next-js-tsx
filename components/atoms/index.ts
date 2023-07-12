@@ -1,5 +1,6 @@
 import PageWrapper from "./PageWrapper"
 import Logo from "./Logo"
-import TextLink from "./TextLink"
+import Avatar from "./Avatar"
+import ButtonLink from "./ButtonLink"
 
-export { PageWrapper, TextLink, Logo }
+export { PageWrapper, ButtonLink, Logo, Avatar }

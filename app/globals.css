@@ -29,9 +29,35 @@
   body {
     @apply h-full bg-white font-body;
   }
+
+  a {
+    @apply flex items-center;
+  }
 }
 
 @layer components {
+  .menu-link {
+    @apply rounded-full text-[15px] font-semibold leading-[24px] px-2 transition-all duration-15 hover:bg-color-neutral h-[32px];
+  }
+
+  .btn {
+    @apply rounded-full py-[11px] px-[24px] font-semibold text-base tracking-[0.005em] border border-transparent bg-transparent flex transition-all duration-15 ease-in-out;
+  }
+
+  .btn-size-sm {
+    @apply py-[3px] !px-[16px] text-[15px] h-[32px];
+  }
+
+  .btn-size-lg {
+    @apply rounded-full py-[16px] px-[32px] text-[22px];
+  }
+
+  .btn-primary {
+    @apply !bg-color-primary border-color-primary border text-color-green hover:bg-color-primary-hover;
+  }
+  .btn-secondary {
+    @apply bg-transparent;
+  }
 }
 
 @layer utilities {
