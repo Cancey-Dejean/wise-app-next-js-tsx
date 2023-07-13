@@ -40,8 +40,12 @@
     @apply rounded-full text-[15px] font-semibold leading-[24px] px-2 transition-all duration-15 hover:bg-color-neutral h-[32px];
   }
 
+  .menu-link.cta {
+    @apply bg-color-primary border-color-primary border text-color-interactive-primary hover:bg-color-interactive-accent-hover px-4;
+  }
+
   .btn {
-    @apply rounded-full py-[11px] px-[24px] font-semibold text-base tracking-[0.005em] border border-transparent bg-transparent flex transition-all duration-15 ease-in-out;
+    @apply rounded-full py-[11px] px-[24px] font-semibold text-base tracking-[0.005em] border border-transparent bg-transparent  transition-all duration-15 ease-in-out inline-block text-center min-w-[182px];
   }
 
   .btn-size-sm {
@@ -53,10 +57,10 @@
   }
 
   .btn-primary {
-    @apply !bg-color-primary border-color-primary border text-color-green hover:bg-color-primary-hover;
+    @apply bg-color-primary border-color-primary border text-color-interactive-primary hover:bg-color-interactive-accent-hover;
   }
   .btn-secondary {
-    @apply bg-transparent;
+    @apply bg-transparent border-color-interactive-primary text-color-interactive-primary hover:bg-color-interactive-accent-hover hover:border-color-primary border;
   }
 }
 

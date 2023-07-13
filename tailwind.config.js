@@ -13,9 +13,11 @@ module.exports = {
       },
       colors: {
         "color-body": "rgb(69, 71, 69)",
+        "color-content-primary": "#0e0f0c",
+        "color-content-secondary": "#454745",
         "color-primary": "#9fe870",
-        "color-primary-hover": "#80e142",
-        "color-green": "#163300",
+        "color-interactive-accent-hover": "#80e142",
+        "color-interactive-primary": "#163300",
         "color-green-hover": "#0d1f00",
         "color-neutral": "rgba(22,51,0,.078)",
         "color-neutral-hover": "rgba(22,51,0,.078)",

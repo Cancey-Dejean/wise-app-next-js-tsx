@@ -1,6 +1,6 @@
 import Navbar from "./Navbar"
-import DropDownMenu from "./DropDownMenu"
 import TopRoom from "./TopRoom"
+import Hero from "./Hero"
 import Footer from "./Footer"
 
-export { Navbar, Footer, TopRoom, DropDownMenu }
+export { Navbar, Footer, TopRoom, Hero }

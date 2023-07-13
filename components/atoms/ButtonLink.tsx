@@ -28,8 +28,8 @@ const ButtonLink = ({
       href={url || "#"}
       className={classNames(
         "btn",
-        variant === "primary" ? "btn-primary" : "secondary",
-        size === "sm" ? "btn-size-sm" : "btn-size-lg",
+        variant === "primary" ? "btn-primary" : "btn-secondary",
+        size === "sm" ? "btn-size-sm" : "",
         className || ""
       )}
     >

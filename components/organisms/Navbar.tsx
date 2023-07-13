@@ -1,17 +1,18 @@
 "use client"
+import Link from "next/link"
 import { Avatar, ButtonLink, Logo } from "../atoms"
 import classNames from "classnames"
-import Link from "next/link"
 import { DropDownMenu } from "@/components/organisms"
-import { Fragment, useState } from "react"
-import { Dialog, Transition } from "@headlessui/react"
-import { XMarkIcon } from "@heroicons/react/24/outline"
+import { ChevronDownIcon } from "@heroicons/react/20/solid"
+// import { Fragment, useState } from "react"
+// import { Dialog, Transition } from "@headlessui/react"
+// import { XMarkIcon } from "@heroicons/react/24/outline"
 // import { menuItems } from "@/constants"
 
 interface NavbarProps {}
 
 const Navbar = ({}: NavbarProps) => {
-  const [open, setOpen] = useState(false)
+  // const [open, setOpen] = useState(false)
 
   return (
     <header className="h-[82px] flex items-center">
@@ -29,14 +30,9 @@ const Navbar = ({}: NavbarProps) => {
           <nav className="flex items-center justify-between w-full ">
             <ul>
               <li>
-                <ButtonLink
-                  url="/#personal"
-                  size="sm"
-                  variant="primary"
-                  linkable
-                >
+                <Link href="/#personal" className="menu-link cta">
                   Personal
-                </ButtonLink>
+                </Link>
               </li>
               <li>
                 <Link href="/about" className="menu-link">
@@ -47,7 +43,12 @@ const Navbar = ({}: NavbarProps) => {
 
             <ul>
               <li>
-                <DropDownMenu labelText="Features" />
+                <Link href="/about" className="menu-link">
+                  Features
+                  <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
+                </Link>
+
+                {/* <DropDownMenu labelText="Features" /> */}
               </li>
               <li>
                 <Link href="/about" className="menu-link">
@@ -63,11 +64,11 @@ const Navbar = ({}: NavbarProps) => {
                 <Link
                   href="#"
                   className="menu-link gap-1 hover:bg-transparent"
-                  onClick={() => setOpen(true)}
+                  // onClick={() => setOpen(true)}
                 >
                   <Avatar imgSrc="/images/us-flag.svg" /> EN
                 </Link>
-                <Transition.Root show={open} as={Fragment}>
+                {/* <Transition.Root show={open} as={Fragment}>
                   <Dialog as="div" className="relative z-10" onClose={setOpen}>
                     <div className="fixed inset-0 bg-[rgba(14,15,12,.4)]" />
 
@@ -107,9 +108,7 @@ const Navbar = ({}: NavbarProps) => {
                                     </div>
                                   </div>
                                 </div>
-                                <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                                  {/* Your content */}
-                                </div>
+                                <div className="relative mt-6 flex-1 px-4 sm:px-6 content-area"></div>
                               </div>
                             </Dialog.Panel>
                           </Transition.Child>
@@ -117,7 +116,7 @@ const Navbar = ({}: NavbarProps) => {
                       </div>
                     </div>
                   </Dialog>
-                </Transition.Root>
+                </Transition.Root> */}
               </li>
               <li>
                 <Link href="/about" className="menu-link">
@@ -125,14 +124,9 @@ const Navbar = ({}: NavbarProps) => {
                 </Link>
               </li>
               <li>
-                <ButtonLink
-                  url="/#register"
-                  size="sm"
-                  variant="primary"
-                  linkable
-                >
+                <Link href="/register" className="menu-link cta">
                   Register
-                </ButtonLink>
+                </Link>
               </li>
             </ul>
           </nav>
