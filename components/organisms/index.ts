@@ -1,6 +1,6 @@
 import Navbar from "./Navbar"
-import TopRoom from "./TopRoom"
 import Hero from "./Hero"
+import UseMoney from "./UseMoney"
 import Footer from "./Footer"
 
-export { Navbar, Footer, TopRoom, Hero }
+export { Navbar, Footer, Hero, UseMoney }

@@ -1,21 +1,30 @@
-interface AnimatedVideoProps {}
+import classNames from "classnames"
 
-const AnimatedVideo = ({}: AnimatedVideoProps) => {
+interface AnimatedVideoProps {
+  className?: string
+  videoClasses?: string
+  videoUrl: string
+  videoFallbackImage: string
+}
+
+const AnimatedVideo = ({
+  className,
+  videoUrl,
+  videoFallbackImage,
+  videoClasses,
+}: AnimatedVideoProps) => {
   return (
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      poster="/images/globe-poster.jpg"
-      className="max-w-full w-full h-auto"
-    >
-      <source
-        src="/videos/3d-globe-webm.webm"
-        type="video/webm; codecs=av01.0.12M.08.0.110.01.01.01.0"
+    <div className={classNames("py-10", className || "")}>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster={videoFallbackImage}
+        className={classNames("max-w-full w-full h-auto", videoClasses || "")}
+        src={videoUrl}
       />
-      <source src="/videos/3d-globe-mp4.mp4" type="video/mp4" />
-    </video>
+    </div>
   )
 }
 

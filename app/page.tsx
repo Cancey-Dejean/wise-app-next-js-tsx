@@ -1,5 +1,5 @@
 import { AnimatedVideo, PageWrapper } from "@/components/atoms"
-import { Hero } from "@/components/organisms"
+import { Hero, UseMoney } from "@/components/organisms"
 
 export default function Home() {
   return (
@@ -13,9 +13,18 @@ export default function Home() {
         secondaryBtnUrl="#save-money"
       />
 
-      <div className="max-w-[897px] w-full mx-auto pt-6">
-        <AnimatedVideo />
-      </div>
+      <AnimatedVideo
+        className="max-w-[897px] w-full mx-auto "
+        videoUrl="/videos/3d-globe-mp4.mp4"
+        videoFallbackImage="/images/globe-poster.jpg"
+      />
+
+      <UseMoney
+        primaryBtnText="Open an account"
+        primaryBtnUrl="#open-account"
+        secondaryBtnText="Compare savings"
+        secondaryBtnUrl="#save-money"
+      />
     </PageWrapper>
   )
 }

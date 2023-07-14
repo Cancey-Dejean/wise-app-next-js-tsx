@@ -1,13 +1,8 @@
-import { ButtonGroup, ButtonLink } from "../atoms"
+import { ButtonGroupProps, HeroProps } from "@/types"
+import { SubTitle } from "../atoms"
+import { ButtonGroup } from "../molecules"
 
-interface HeroProps {
-  title: string
-  desc?: string
-  primaryBtnText?: string
-  primaryBtnUrl?: string
-  secondaryBtnText?: string
-  secondaryBtnUrl?: string
-}
+interface HeroPropsWithButtonGroupProps extends HeroProps, ButtonGroupProps {}
 
 const Hero = ({
   title,
@@ -16,7 +11,7 @@ const Hero = ({
   primaryBtnUrl,
   secondaryBtnText,
   secondaryBtnUrl,
-}: HeroProps) => {
+}: HeroPropsWithButtonGroupProps) => {
   return (
     <section className="pt-[96px] text-center pb-10">
       <div className="container">
@@ -25,30 +20,18 @@ const Hero = ({
         </h1>
 
         <div className="max-w-[580px] w-full mx-auto text-color-content-secondary mb-6">
-          <p className="text-xl">
+          <SubTitle>
             {desc || "Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
-          </p>
+          </SubTitle>
         </div>
 
-        {primaryBtnText || secondaryBtnText !== "" ? (
-          <ButtonGroup className="justify-center">
-            {primaryBtnText !== "" && (
-              <ButtonLink url={primaryBtnUrl || "#"} linkable variant="primary">
-                {primaryBtnText || "Button"}
-              </ButtonLink>
-            )}
-
-            {secondaryBtnText !== "" && (
-              <ButtonLink
-                url={secondaryBtnUrl || "#"}
-                linkable
-                variant="secondary"
-              >
-                {secondaryBtnText || "Button"}
-              </ButtonLink>
-            )}
-          </ButtonGroup>
-        ) : null}
+        <ButtonGroup
+          className="justify-center"
+          primaryBtnText={primaryBtnText}
+          primaryBtnUrl={primaryBtnUrl}
+          secondaryBtnText={secondaryBtnText}
+          secondaryBtnUrl={secondaryBtnUrl}
+        />
       </div>
     </section>
   )

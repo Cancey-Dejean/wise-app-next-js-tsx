@@ -9,13 +9,11 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid"
 // import { XMarkIcon } from "@heroicons/react/24/outline"
 // import { menuItems } from "@/constants"
 
-interface NavbarProps {}
-
-const Navbar = ({}: NavbarProps) => {
+const Navbar = () => {
   // const [open, setOpen] = useState(false)
 
   return (
-    <header className="h-[82px] flex items-center">
+    <header className="min-h-[82px] flex items-center">
       <div className="container">
         <div
           className={classNames(
