@@ -66,6 +66,6 @@
 
 @layer utilities {
   .container {
-    @apply max-w-[1164px] w-full mx-auto px-8;
+    @apply max-w-[1253px] w-full mx-auto px-8;
   }
 }
