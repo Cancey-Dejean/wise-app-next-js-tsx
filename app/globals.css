@@ -41,7 +41,7 @@
   }
 
   .menu-link.cta {
-    @apply bg-color-primary border-color-primary border text-color-interactive-primary hover:bg-color-interactive-accent-hover px-4;
+    @apply bg-color-interactive-accent border-color-interactive-accent border text-color-interactive-primary hover:bg-color-interactive-accent-hover px-4;
   }
 
   .btn {
@@ -57,10 +57,10 @@
   }
 
   .btn-primary {
-    @apply bg-color-primary border-color-primary border text-color-interactive-primary hover:bg-color-interactive-accent-hover;
+    @apply bg-color-interactive-accent border-color-interactive-accent border text-color-interactive-primary hover:bg-color-interactive-accent-hover;
   }
   .btn-secondary {
-    @apply bg-transparent border-color-interactive-primary text-color-interactive-primary hover:bg-color-interactive-accent-hover hover:border-color-primary border;
+    @apply bg-transparent border-color-interactive-primary text-color-interactive-primary hover:bg-color-interactive-accent-hover hover:border-color-interactive-accent border;
   }
 }
 

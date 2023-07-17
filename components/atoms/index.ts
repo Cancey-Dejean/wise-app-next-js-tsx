@@ -6,6 +6,7 @@ import ButtonLink from "./ButtonLink"
 import AnimatedVideo from "./AnimatedVideo"
 import SectionTitle from "./SectionTitle"
 import SubTitle from "./SubTitle"
+import { AngleIcon } from "./Icons"
 
 export {
   PageWrapper,
@@ -15,4 +16,5 @@ export {
   AnimatedVideo,
   SectionTitle,
   SubTitle,
+  AngleIcon,
 }
