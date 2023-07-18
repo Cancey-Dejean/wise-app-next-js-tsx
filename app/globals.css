@@ -45,7 +45,7 @@
   }
 
   .btn {
-    @apply rounded-full py-[11px] px-[24px] font-semibold text-base tracking-[0.005em] border border-transparent bg-transparent  transition-all duration-15 ease-in-out inline-block text-center min-w-[182px];
+    @apply rounded-full py-[11px] px-[24px] font-semibold text-base tracking-[0.005em] border border-transparent bg-transparent  transition-all duration-15 ease-in-out inline-block text-center;
   }
 
   .btn-size-sm {

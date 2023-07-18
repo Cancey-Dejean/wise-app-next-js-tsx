@@ -7,6 +7,7 @@ import {
 import { AppStoreButtonGroup, ButtonGroup } from "@/components/molecules"
 import {
   CardSection,
+  FlagRow,
   Hero,
   SendCalculator,
   UseMoney,
@@ -81,7 +82,27 @@ export default function Home() {
         </SubTitle>
       </SendCalculator>
 
-      <CardSection />
+      <CardSection imgSrc="/images/card.jpg" imgAlt="Card in pocket">
+        <div className="max-w-[50%] w-full mt-10 flex flex-col gap-8">
+          <SectionTitle>
+            The card that's always got the right currency
+          </SectionTitle>
+
+          <SubTitle>
+            Save as you spend and withdraw over 40 currencies at the live rate
+            automatically.
+          </SubTitle>
+
+          <ButtonGroup
+            primaryBtnText="Open your card"
+            primaryBtnUrl="#open-card"
+            secondaryBtnText="Learn more"
+            secondaryBtnUrl="#learn-more"
+          />
+        </div>
+      </CardSection>
+
+      <FlagRow />
     </PageWrapper>
   )
 }

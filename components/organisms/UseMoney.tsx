@@ -9,7 +9,7 @@ const UseMoney = ({
   smallerImageAlt,
 }: UseMoneyProps) => {
   return (
-    <section className="py-[96px]">
+    <section className="py-[96px] mb-[80px]">
       <div className="container flex items-start !max-w-[1385px]">
         <div className="max-w-[471px] w-full flex flex-col gap-8">
           {children}

@@ -50,3 +50,15 @@ export interface AngleIconProps {
   className?: string
   angleDown?: boolean
 }
+
+export interface CircleFlagProps {
+  imgSrc: string
+  imgAlt: string
+  className?: string
+}
+
+export interface CardSectionProps {
+  children: ReactNode
+  imgSrc: string
+  imgAlt: string
+}

@@ -6,6 +6,7 @@ import ButtonLink from "./ButtonLink"
 import AnimatedVideo from "./AnimatedVideo"
 import SectionTitle from "./SectionTitle"
 import SubTitle from "./SubTitle"
+import CircleFlag from "./CircleFlag"
 import { AngleIcon } from "./Icons"
 
 export {
@@ -17,4 +18,5 @@ export {
   SectionTitle,
   SubTitle,
   AngleIcon,
+  CircleFlag,
 }
