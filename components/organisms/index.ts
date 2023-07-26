@@ -5,6 +5,7 @@ import SendCalculator from "./SendCalculator"
 import Calculator from "./Calculator"
 import CardSection from "./CardSection"
 import FlagRow from "./FlagRow"
+import Perks from "./Perks"
 import Footer from "./Footer"
 
 export {
@@ -16,4 +17,5 @@ export {
   Calculator,
   CardSection,
   FlagRow,
+  Perks,
 }

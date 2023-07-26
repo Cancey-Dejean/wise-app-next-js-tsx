@@ -61,4 +61,6 @@ export interface CardSectionProps {
   children: ReactNode
   imgSrc: string
   imgAlt: string
+  flipped?: boolean
+  showCardImage?: boolean
 }

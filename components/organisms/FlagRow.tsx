@@ -22,27 +22,11 @@ const FlagRow = () => {
             </div>
           </div>
 
-          <CircleFlag
-            imgSrc="/images/eu-detailed.svg"
-            imgAlt=""
-            // className="p-3 float-right aspect-square h-full rounded-[1000px]  w-full"
-          />
-          <CircleFlag imgSrc="/images/eu-detailed.svg" imgAlt="" className="" />
-          <CircleFlag
-            imgSrc="/images/eu-detailed.svg"
-            imgAlt=""
-            // className="p-3 float-right aspect-square h-full rounded-[1000px]  w-full"
-          />
-          <CircleFlag
-            imgSrc="/images/eu-detailed.svg"
-            imgAlt=""
-            // className="p-3 float-right aspect-square h-full rounded-[1000px]  w-full"
-          />
-          <CircleFlag
-            imgSrc="/images/eu-detailed.svg"
-            imgAlt=""
-            // className="p-3 float-right aspect-square h-full rounded-[1000px]  w-full"
-          />
+          <CircleFlag imgSrc="/images/eu-detailed.svg" imgAlt="" />
+          <CircleFlag imgSrc="/images/in-detailed.svg" imgAlt="" />
+          <CircleFlag imgSrc="/images/us-detailed.svg" imgAlt="" />
+          <CircleFlag imgSrc="/images/tr-detailed.svg" imgAlt="" />
+          <CircleFlag imgSrc="/images/kr-detailed.svg" imgAlt="" />
         </div>
       </div>
     </section>

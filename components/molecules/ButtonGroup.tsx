@@ -4,22 +4,22 @@ import { ButtonGroupProps } from "@/types"
 
 const ButtonGroup = ({
   className,
-  primaryBtnText,
-  primaryBtnUrl,
-  secondaryBtnText,
-  secondaryBtnUrl,
+  primaryBtnText = "",
+  primaryBtnUrl = "#",
+  secondaryBtnText = "",
+  secondaryBtnUrl = "#",
 }: ButtonGroupProps) => {
   return (
     <div className={classNames("flex items-center gap-4", className || "")}>
       {primaryBtnText !== "" && (
-        <ButtonLink url={primaryBtnUrl || "#"} linkable variant="primary">
-          {primaryBtnText || "Button"}
+        <ButtonLink url={primaryBtnUrl} linkable variant="primary">
+          {primaryBtnText}
         </ButtonLink>
       )}
 
       {secondaryBtnText !== "" && (
-        <ButtonLink url={secondaryBtnUrl || "#"} linkable variant="secondary">
-          {secondaryBtnText || "Button"}
+        <ButtonLink url={secondaryBtnUrl} linkable variant="secondary">
+          {secondaryBtnText}
         </ButtonLink>
       )}
     </div>

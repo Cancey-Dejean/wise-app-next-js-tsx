@@ -3,22 +3,22 @@ import { ReactNode } from "react"
 
 interface SectionTitleProps {
   children: ReactNode
-  classes?: string
+  className?: string
   tag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 }
 
 export default function SectionTitle({
   children,
   tag,
-  classes,
+  className,
 }: SectionTitleProps) {
   const TagName = tag || "h1"
 
   return (
     <TagName
       className={classNames(
-        "text-[45px] leading-[54px] font-semibold",
-        classes || ""
+        "text-[53px] leading-[57px]  tracking-[-1.59px] font-semibold",
+        className || ""
       )}
     >
       {children}

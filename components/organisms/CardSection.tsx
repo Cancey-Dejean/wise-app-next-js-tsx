@@ -1,18 +1,35 @@
 import Image from "next/image"
 import { CardSectionProps } from "@/types"
+import { CardImage } from "../molecules"
 
-const CardSection = ({ children, imgSrc, imgAlt }: CardSectionProps) => {
+const CardSection = ({
+  children,
+  imgSrc = "https://placehold.jp/1100x663.png",
+  imgAlt = "placeholder",
+  showCardImage = false,
+  flipped = false,
+}: CardSectionProps) => {
   return (
     <section className="py-[96px]">
-      <div className="container">
-        <Image
-          src={imgSrc || "https://placehold.jp/1100x663.png"}
-          width={1100}
-          height={663}
-          alt={imgAlt}
-        />
+      <div
+        className={`container flex gap-10 ${
+          flipped ? "flex-col-reverse" : "flex-col"
+        }`}
+      >
+        <div className="relative">
+          <Image
+            src={imgSrc}
+            width={1100}
+            height={663}
+            alt={imgAlt}
+            className="w-full"
+          />
 
-        <div className="max-w-[936px] mx-auto">{children}</div>
+          {/* Optional Card Content */}
+          {showCardImage && <CardImage />}
+        </div>
+
+        {children}
       </div>
     </section>
   )

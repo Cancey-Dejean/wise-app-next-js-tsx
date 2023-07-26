@@ -9,6 +9,7 @@ import {
   CardSection,
   FlagRow,
   Hero,
+  Perks,
   SendCalculator,
   UseMoney,
 } from "@/components/organisms"
@@ -75,7 +76,7 @@ export default function Home() {
       <SendCalculator>
         <SectionTitle>Save up to 3x when sending money abroad</SectionTitle>
 
-        <SubTitle classes="max-w-[423px] w-full">
+        <SubTitle className="max-w-[423px] w-full">
           Sending money shouldn’t cost the earth, so we built Wise to save you
           money when you transfer and exchange internationally. We charge as
           little as possible: right now a tiny fee, eventually free.
@@ -83,26 +84,56 @@ export default function Home() {
       </SendCalculator>
 
       <CardSection imgSrc="/images/card.jpg" imgAlt="Card in pocket">
-        <div className="max-w-[50%] w-full mt-10 flex flex-col gap-8">
-          <SectionTitle>
-            The card that's always got the right currency
-          </SectionTitle>
+        <div className="max-w-[1133px] w-full mx-0">
+          <div className="max-w-[566px] w-full flex flex-col gap-8 ml-[8%]">
+            <SectionTitle>
+              The card that's always got the right currency
+            </SectionTitle>
 
-          <SubTitle>
-            Save as you spend and withdraw over 40 currencies at the live rate
-            automatically.
-          </SubTitle>
+            <SubTitle>
+              Save as you spend and withdraw over 40 currencies at the live rate
+              automatically.
+            </SubTitle>
 
-          <ButtonGroup
-            primaryBtnText="Open your card"
-            primaryBtnUrl="#open-card"
-            secondaryBtnText="Learn more"
-            secondaryBtnUrl="#learn-more"
-          />
+            <ButtonGroup
+              primaryBtnText="Open your card"
+              primaryBtnUrl="#open-card"
+              secondaryBtnText="Learn more"
+              secondaryBtnUrl="#learn-more"
+            />
+          </div>
         </div>
       </CardSection>
 
       <FlagRow />
+
+      <CardSection
+        imgSrc="/images/cover.jpg"
+        imgAlt="flower wall smiling"
+        flipped
+      >
+        <div className="ml-[17%]">
+          <div className="max-w-[816px] w-full flex flex-col gap-8 ">
+            <SectionTitle>
+              Boost your balance with our interest feature
+            </SectionTitle>
+
+            <SubTitle className="max-w-[562px] w-full">
+              Receive 4.13% APY on your USD balance when you opt-in to our
+              interest feature. Instant access, so your money is available to
+              you when you need it.
+            </SubTitle>
+
+            <ButtonGroup
+              primaryBtnText="Discover interest feature"
+              primaryBtnUrl="#discover-interest"
+              className="mb-10"
+            />
+          </div>
+        </div>
+      </CardSection>
+
+      <Perks />
     </PageWrapper>
   )
 }
