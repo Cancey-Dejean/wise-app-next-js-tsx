@@ -3,8 +3,8 @@ import Link from "next/link"
 import { ReactNode } from "react"
 
 interface ButtonProps {
-  variant?: "primary" | "secondary"
-  size?: "sm" | "lg"
+  variant: "btn-primary" | "btn-secondary" | "btn-inverted"
+  size?: "btn-sm" | "btn-lrg"
   url: string
   className?: string
   children: ReactNode
@@ -14,36 +14,45 @@ interface ButtonProps {
 }
 
 const ButtonLink = ({
-  variant,
-  size,
+  variant = "btn-primary",
+  size = "btn-lrg",
   children,
-  url,
-  className,
+  url = "#",
+  className = "",
   linkable,
   onClick,
-  btnType,
+  btnType = "button",
+  ...props
 }: ButtonProps) => {
   return linkable ? (
     <Link
-      href={url || "#"}
+      href={url}
       className={classNames(
         "btn",
-        variant === "primary" ? "btn-primary" : "btn-secondary",
-        size === "sm" ? "btn-size-sm" : "",
-        className || ""
+        `${variant}`,
+        `${size}`,
+        // variant === "primary" && "btn-primary",
+        // variant === "inverted" && "btn-inverted",
+        // variant === "inverted" && "btn-primary",
+        // size === "sm" ? "btn-size-sm" : "",
+        className,
+        { ...props }
       )}
     >
       {children || <span>Linkable Button</span>}
     </Link>
   ) : (
     <button
-      type={btnType || "button"}
+      type={btnType}
       onClick={onClick}
       className={classNames(
         "btn",
-        variant === "primary" ? "btn-primary" : "secondary",
-        size === "sm" ? "btn-size-sm" : "btn-size-lg",
-        className || ""
+        `${variant}`,
+        `${size}`,
+        // variant === "primary" ? "btn-primary" : "secondary",
+        // size === "sm" ? "btn-size-sm" : "btn-size-lg",
+        className,
+        { ...props }
       )}
     >
       {children || <span>Button</span>}

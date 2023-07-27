@@ -6,6 +6,8 @@ import Calculator from "./Calculator"
 import CardSection from "./CardSection"
 import FlagRow from "./FlagRow"
 import Perks from "./Perks"
+import Trusted from "./Trusted"
+import GoingPlaces from "./GoingPlaces"
 import Footer from "./Footer"
 
 export {
@@ -18,4 +20,6 @@ export {
   CardSection,
   FlagRow,
   Perks,
+  Trusted,
+  GoingPlaces,
 }

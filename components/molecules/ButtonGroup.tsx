@@ -3,25 +3,27 @@ import { ButtonLink } from "../atoms"
 import { ButtonGroupProps } from "@/types"
 
 const ButtonGroup = ({
-  className,
-  primaryBtnText = "",
-  primaryBtnUrl = "#",
-  secondaryBtnText = "",
-  secondaryBtnUrl = "#",
+  className = "",
+  children = <p>Add buttons here</p>,
 }: ButtonGroupProps) => {
   return (
-    <div className={classNames("flex items-center gap-4", className || "")}>
-      {primaryBtnText !== "" && (
-        <ButtonLink url={primaryBtnUrl} linkable variant="primary">
+    <div className={classNames("flex items-center gap-4", className)}>
+      {children}
+      {/* {primaryBtnText !== "" && (
+        <ButtonLink url={primaryBtnUrl} linkable secondaryBtnVariant={variant}>
           {primaryBtnText}
         </ButtonLink>
       )}
 
       {secondaryBtnText !== "" && (
-        <ButtonLink url={secondaryBtnUrl} linkable variant="secondary">
+        <ButtonLink
+          url={secondaryBtnUrl}
+          linkable
+          variant={secondaryBtnVariant}
+        >
           {secondaryBtnText}
-        </ButtonLink>
-      )}
+        </ButtonLink> 
+      )}*/}
     </div>
   )
 }

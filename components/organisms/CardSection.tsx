@@ -26,7 +26,13 @@ const CardSection = ({
           />
 
           {/* Optional Card Content */}
-          {showCardImage && <CardImage />}
+          {showCardImage && (
+            <CardImage
+              title="Interest Feature"
+              desc="Get the power of an international account, with the added security of up to $250,000 in passthrough FDIC insurance"
+              imageUrl="/images/graph-small@2x.webp"
+            />
+          )}
         </div>
 
         {children}

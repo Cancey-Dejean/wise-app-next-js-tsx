@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ["Inter", "sans-serif"],
-        title: ["Wise Sans", "cursive"],
+        title: ["Wise Sans", "sans-serif"],
       },
       colors: {
         "color-body": "rgb(69, 71, 69)",

@@ -7,7 +7,8 @@ import AnimatedVideo from "./AnimatedVideo"
 import SectionTitle from "./SectionTitle"
 import SubTitle from "./SubTitle"
 import CircleFlag from "./CircleFlag"
-import { AngleIcon } from "./Icons"
+import IconTextRow from "./IconTextRow"
+import { AngleIcon, CheckIcon, BankIcon, BadgeIcon } from "./Icons"
 
 export {
   PageWrapper,
@@ -18,5 +19,9 @@ export {
   SectionTitle,
   SubTitle,
   AngleIcon,
+  CheckIcon,
+  BankIcon,
+  BadgeIcon,
+  IconTextRow,
   CircleFlag,
 }

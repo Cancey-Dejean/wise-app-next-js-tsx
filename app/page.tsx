@@ -1,5 +1,6 @@
 import {
   AnimatedVideo,
+  ButtonLink,
   PageWrapper,
   SectionTitle,
   SubTitle,
@@ -8,27 +9,39 @@ import { AppStoreButtonGroup, ButtonGroup } from "@/components/molecules"
 import {
   CardSection,
   FlagRow,
+  GoingPlaces,
   Hero,
   Perks,
   SendCalculator,
+  Trusted,
   UseMoney,
 } from "@/components/organisms"
+import Image from "next/image"
 
 export default function Home() {
   return (
     <PageWrapper>
-      <Hero
-        title="Money for here, there and everywhere"
-        subTitle="160 countries. 40 currencies. Get the account built to save you
-            money round the world."
-      >
-        <ButtonGroup
-          className="justify-center"
-          primaryBtnText="Open an account"
-          primaryBtnUrl="#open-account"
-          secondaryBtnText="Send money now"
-          secondaryBtnUrl="#send-money"
-        />
+      <Hero>
+        <SectionTitle className="section-title-alt text-color-content-primary mb-8">
+          Money for here, there and everywhere
+        </SectionTitle>
+
+        <div className="max-w-[580px] w-full mx-auto text-color-content-secondary mb-6">
+          <SubTitle>
+            160 countries. 40 currencies. Get the account built to save you
+            money round the world.
+          </SubTitle>
+        </div>
+
+        <ButtonGroup className="justify-center">
+          <ButtonLink linkable variant="btn-primary" url="#open-account">
+            Open an account
+          </ButtonLink>
+
+          <ButtonLink linkable variant="btn-secondary" url="#send-money">
+            Send money now
+          </ButtonLink>
+        </ButtonGroup>
       </Hero>
 
       <AnimatedVideo
@@ -54,16 +67,18 @@ export default function Home() {
           one account.
         </SubTitle>
 
-        <ButtonGroup
-          className="justify-start"
-          primaryBtnText="Open an account"
-          primaryBtnUrl="#open-account"
-          secondaryBtnText="Compare savings"
-          secondaryBtnUrl="#compare-savings"
-        />
+        <ButtonGroup className="justify-start">
+          <ButtonLink linkable variant="btn-primary" url="#open-account">
+            Open an account
+          </ButtonLink>
+
+          <ButtonLink linkable variant="btn-secondary" url="#compare-savings">
+            Compare savings
+          </ButtonLink>
+        </ButtonGroup>
 
         <AppStoreButtonGroup
-          className="mt-10"
+          className="mt-2"
           LogoOne="/images/app-store.svg"
           LogoOneUrl="#"
           LogoOneAlt="Download from the Apple App Store"
@@ -95,12 +110,15 @@ export default function Home() {
               automatically.
             </SubTitle>
 
-            <ButtonGroup
-              primaryBtnText="Open your card"
-              primaryBtnUrl="#open-card"
-              secondaryBtnText="Learn more"
-              secondaryBtnUrl="#learn-more"
-            />
+            <ButtonGroup>
+              <ButtonLink linkable variant="btn-primary" url="#open-card">
+                Open your card
+              </ButtonLink>
+
+              <ButtonLink linkable variant="btn-secondary" url="#learn-more">
+                Learn more
+              </ButtonLink>
+            </ButtonGroup>
           </div>
         </div>
       </CardSection>
@@ -111,9 +129,10 @@ export default function Home() {
         imgSrc="/images/cover.jpg"
         imgAlt="flower wall smiling"
         flipped
+        showCardImage
       >
         <div className="ml-[17%]">
-          <div className="max-w-[816px] w-full flex flex-col gap-8 ">
+          <div className="max-w-[816px] w-full flex flex-col gap-8 items-start">
             <SectionTitle>
               Boost your balance with our interest feature
             </SectionTitle>
@@ -124,16 +143,67 @@ export default function Home() {
               you when you need it.
             </SubTitle>
 
-            <ButtonGroup
-              primaryBtnText="Discover interest feature"
-              primaryBtnUrl="#discover-interest"
-              className="mb-10"
-            />
+            <ButtonLink
+              linkable
+              variant="btn-primary"
+              url="#discover-interest"
+              className="items-start mb-10"
+            >
+              Discover interest feature
+            </ButtonLink>
           </div>
         </div>
       </CardSection>
 
       <Perks />
+
+      <Trusted>
+        <SectionTitle className="section-title-alt mb-10">
+          Trusted by businesses small and large
+        </SectionTitle>
+
+        <div className="flex items-start gap-6">
+          <div className="max-w-[769px] w-full justify-self-end">
+            <Image
+              src="/images/cards-green.webp"
+              alt="Green cards"
+              width={769}
+              height={528}
+              className="mt-[150px]"
+            />
+          </div>
+
+          <div className="flex-1 py-10 self-stretch">
+            <SubTitle>
+              Go global with the international business account. Pay employees,
+              get paid and manage your cash flow in multiple currencies. Join
+              over 300,000 businesses thriving with Wise.
+            </SubTitle>
+
+            <ButtonGroup className="mt-6">
+              <ButtonLink
+                linkable
+                variant="btn-inverted"
+                url="#open-business-account"
+                className="flex-1"
+              >
+                Open a Business account
+              </ButtonLink>
+
+              <ButtonLink
+                linkable
+                variant="btn-secondary"
+                url="#learn-more"
+                className="hover:bg-color-green-hover hover:border-color-green-hover hover:text-color-interactive-accent flex-1"
+              >
+                Learn more
+              </ButtonLink>
+            </ButtonGroup>
+          </div>
+        </div>
+      </Trusted>
+
+      <GoingPlaces>Hello</GoingPlaces>
     </PageWrapper>
   )
 }

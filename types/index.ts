@@ -13,8 +13,6 @@ export interface TextLinkProps {
 
 export interface HeroProps {
   children: ReactNode
-  title: string
-  subTitle: string
 }
 
 export interface UseMoneyProps {
@@ -31,10 +29,7 @@ export interface SendCalculatorProps {
 
 export interface ButtonGroupProps {
   className?: string
-  primaryBtnText?: string
-  primaryBtnUrl?: string
-  secondaryBtnText?: string
-  secondaryBtnUrl?: string
+  children: ReactNode
 }
 export interface AppStoreButtonGroupProps {
   className?: string
