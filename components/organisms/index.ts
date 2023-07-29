@@ -8,6 +8,7 @@ import FlagRow from "./FlagRow"
 import Perks from "./Perks"
 import Trusted from "./Trusted"
 import GoingPlaces from "./GoingPlaces"
+import WithoutBorders from "./WithoutBorders"
 import Footer from "./Footer"
 
 export {
@@ -22,4 +23,5 @@ export {
   Perks,
   Trusted,
   GoingPlaces,
+  WithoutBorders,
 }

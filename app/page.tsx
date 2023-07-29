@@ -15,6 +15,7 @@ import {
   SendCalculator,
   Trusted,
   UseMoney,
+  WithoutBorders,
 } from "@/components/organisms"
 import Image from "next/image"
 
@@ -204,6 +205,8 @@ export default function Home() {
       </Trusted>
 
       <GoingPlaces>Hello</GoingPlaces>
+
+      <WithoutBorders />
     </PageWrapper>
   )
 }

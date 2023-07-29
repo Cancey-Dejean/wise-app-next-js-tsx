@@ -19,6 +19,7 @@ module.exports = {
         "color-interactive-accent-hover": "#80e142",
         "color-interactive-primary": "#163300",
         "color-light-grey": "#edefeb",
+        "color-light-grey-2": "#e8ebe6",
         "color-content-link": "#163300",
         "color-green-hover": "#0d1f00",
         "color-neutral": "rgba(22,51,0,.078)",
