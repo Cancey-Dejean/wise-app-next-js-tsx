@@ -70,6 +70,14 @@
   .btn-lg {
     @apply rounded-full py-[16px] px-[32px] text-[22px];
   }
+
+  .card-primary {
+    @apply !bg-color-interactive-accent !text-color-interactive-primary;
+  }
+
+  .card-inverted {
+    @apply !bg-color-interactive-primary !text-color-interactive-accent;
+  }
 }
 
 @layer utilities {

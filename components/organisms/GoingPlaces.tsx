@@ -1,11 +1,9 @@
-import { ReactNode } from "react"
 import { CardReview } from "../molecules"
+import { ArrowLeft, ArrowRight } from "../atoms/Icons"
 
-interface GoingPlacesProps {
-  children: ReactNode
-}
+interface GoingPlacesProps {}
 
-const GoingPlaces = ({ children }: GoingPlacesProps) => {
+const GoingPlaces = ({}: GoingPlacesProps) => {
   return (
     <section className="py-[96px]">
       <div className="overflow-hidden relative">
@@ -18,34 +16,16 @@ const GoingPlaces = ({ children }: GoingPlacesProps) => {
             <div className="flex items-center gap-[26px]">
               <button
                 type="button"
-                className="w-[78px] h-[78px] bg-color-neutral rounded-full flex items-center justify-center"
+                className="w-[78px] h-[78px] bg-color-neutral rounded-full flex items-center justify-center  opacity-[.45] grayscale-[1]"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                  className="w-[42px] h-[42px]"
-                >
-                  <path d="M22.286 11.316H4.629l7.114-7.114-1.2-1.2-8.572 8.571a.829.829 0 0 0 0 1.2l8.572 8.572 1.2-1.2-7.114-7.114h17.657v-1.715Z"></path>
-                </svg>
+                <ArrowLeft />
               </button>
 
               <button
                 type="button"
-                className="w-[78px] h-[78px] bg-color-neutral rounded-full flex items-center justify-center opacity-[.45] grayscale-[1]"
+                className="w-[78px] h-[78px] bg-color-neutral rounded-full flex items-center justify-center"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                  className="w-[42px] h-[42px]"
-                >
-                  <path d="m22.029 11.57-8.572-8.572-1.2 1.2 7.115 7.114H1.713v1.715h17.658l-7.115 7.114 1.2 1.2 8.572-8.572a.829.829 0 0 0 0-1.2Z"></path>
-                </svg>
+                <ArrowRight />
               </button>
             </div>
           </div>
@@ -53,10 +33,28 @@ const GoingPlaces = ({ children }: GoingPlacesProps) => {
 
         <div className="w-1/2 ml-auto">
           <div className="flex">
-            <CardReview />
-            <CardReview />
-            <CardReview />
-            <CardReview />
+            <CardReview
+              cardVariant="card-primary"
+              btnVariant="btn-inverted"
+              imageUrl="/images/expats-v3@2x.webp"
+              imgAlt="Expats"
+              quote="Wise has changed the game in terms of simplicity, and certainly been a lifesaver for expat living."
+            />
+            <CardReview
+              imageUrl="/images/uk.svg"
+              quote="I use Wise to pay a mortgage in a different country each month. Superb. That simple."
+            />
+
+            <CardReview
+              imageUrl="/images/us.svg"
+              quote="The best money travel buddy! Wise makes finances easier to deal with instantly."
+              cardVariant="card-primary"
+            />
+
+            <CardReview
+              imageUrl="/images/dk.svg"
+              quote="Wise has been a lifesaver for me as a student in a foreign country."
+            />
           </div>
         </div>
       </div>

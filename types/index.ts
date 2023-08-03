@@ -58,4 +58,5 @@ export interface CardSectionProps {
   imgAlt: string
   flipped?: boolean
   showCardImage?: boolean
+  className?: string
 }

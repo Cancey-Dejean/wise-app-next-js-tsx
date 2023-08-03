@@ -76,4 +76,34 @@ const BadgeIcon = ({ className = "" }) => {
   )
 }
 
-export { AngleIcon, CheckIcon, BankIcon, BadgeIcon }
+const ArrowLeft = ({ className = "" }) => {
+  return (
+    <svg
+      width="16"
+      height="16"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+      className={`w-[32px] h-[32px] ${className}`}
+    >
+      <path d="M22.286 11.316H4.629l7.114-7.114-1.2-1.2-8.572 8.571a.829.829 0 0 0 0 1.2l8.572 8.572 1.2-1.2-7.114-7.114h17.657v-1.715Z"></path>
+    </svg>
+  )
+}
+
+const ArrowRight = ({ className = "" }) => {
+  return (
+    <svg
+      width="16"
+      height="16"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+      className={`w-[32px] h-[32px] ${className}`}
+    >
+      <path d="m22.029 11.57-8.572-8.572-1.2 1.2 7.115 7.114H1.713v1.715h17.658l-7.115 7.114 1.2 1.2 8.572-8.572a.829.829 0 0 0 0-1.2Z"></path>
+    </svg>
+  )
+}
+
+export { AngleIcon, CheckIcon, BankIcon, BadgeIcon, ArrowLeft, ArrowRight }

@@ -8,9 +8,10 @@ const CardSection = ({
   imgAlt = "placeholder",
   showCardImage = false,
   flipped = false,
+  className = "",
 }: CardSectionProps) => {
   return (
-    <section className="py-[96px]">
+    <section className={`py-[96px] ${className}`}>
       <div
         className={`container flex gap-10 ${
           flipped ? "flex-col-reverse" : "flex-col"

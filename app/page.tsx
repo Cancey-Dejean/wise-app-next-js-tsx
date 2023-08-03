@@ -13,6 +13,7 @@ import {
   Hero,
   Perks,
   SendCalculator,
+  Theft,
   Trusted,
   UseMoney,
   WithoutBorders,
@@ -204,7 +205,7 @@ export default function Home() {
         </div>
       </Trusted>
 
-      <GoingPlaces>Hello</GoingPlaces>
+      <GoingPlaces />
 
       <WithoutBorders />
     </PageWrapper>

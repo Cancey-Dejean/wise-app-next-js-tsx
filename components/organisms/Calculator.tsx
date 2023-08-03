@@ -1,6 +1,6 @@
 import Image from "next/image"
-import { ButtonGroup, InputGroup } from "../molecules"
-import { AngleIcon } from "../atoms"
+import { InputGroup } from "../molecules"
+import { AngleIcon, ButtonLink } from "../atoms"
 
 function Calculator() {
   return (
@@ -143,11 +143,23 @@ function Calculator() {
             </p>
           </div>
 
-          <ButtonGroup
-            className="mt-6 flex-row-reverse [&_a]:flex-1"
-            primaryBtnText="Get Started"
-            secondaryBtnText="Compare price"
-          />
+          <div className="flex items-center gap-6 mt-[24px]">
+            <ButtonLink
+              url="/calculator"
+              variant="btn-secondary"
+              className="flex-1"
+            >
+              Compare price
+            </ButtonLink>
+
+            <ButtonLink
+              url="/calculator"
+              variant="btn-primary"
+              className="flex-1"
+            >
+              Get started
+            </ButtonLink>
+          </div>
         </div>
       </div>
     </div>
