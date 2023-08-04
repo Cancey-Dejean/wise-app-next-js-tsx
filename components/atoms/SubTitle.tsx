@@ -11,6 +11,8 @@ export default function Subtitle({ children, tag, className }: SubTitleProps) {
   const TagName = tag || "p"
 
   return (
-    <TagName className={classNames("", className || "")}>{children}</TagName>
+    <TagName className={classNames("text-xl", className || "")}>
+      {children}
+    </TagName>
   )
 }

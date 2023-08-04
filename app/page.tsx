@@ -13,6 +13,7 @@ import {
   Hero,
   Perks,
   SendCalculator,
+  Theft,
   Trusted,
   UseMoney,
   WithoutBorders,
@@ -23,18 +24,18 @@ export default function Home() {
   return (
     <PageWrapper>
       <Hero>
-        <SectionTitle className="section-title-alt">
+        <SectionTitle className="section-title-alt text-color-content-primary mb-8">
           Money for here, there and everywhere
         </SectionTitle>
 
-        <div className="">
+        <div className="max-w-[580px] w-full mx-auto text-color-content-secondary mb-6">
           <SubTitle>
             160 countries. 40 currencies. Get the account built to save you
             money round the world.
           </SubTitle>
         </div>
 
-        <ButtonGroup className="">
+        <ButtonGroup className="justify-center">
           <ButtonLink linkable variant="btn-primary" url="#open-account">
             Open an account
           </ButtonLink>
@@ -46,7 +47,7 @@ export default function Home() {
       </Hero>
 
       <AnimatedVideo
-        className=""
+        className="max-w-[897px] w-full mx-auto "
         videoUrl="/videos/3d-globe-mp4.mp4"
         videoFallbackImage="/images/globe-poster.jpg"
       />
@@ -68,7 +69,7 @@ export default function Home() {
           one account.
         </SubTitle>
 
-        <ButtonGroup className="">
+        <ButtonGroup className="justify-start">
           <ButtonLink linkable variant="btn-primary" url="#open-account">
             Open an account
           </ButtonLink>
@@ -79,7 +80,7 @@ export default function Home() {
         </ButtonGroup>
 
         <AppStoreButtonGroup
-          className=""
+          className="mt-2"
           LogoOne="/images/app-store.svg"
           LogoOneUrl="#"
           LogoOneAlt="Download from the Apple App Store"
@@ -92,16 +93,16 @@ export default function Home() {
       <SendCalculator>
         <SectionTitle>Save up to 3x when sending money abroad</SectionTitle>
 
-        <SubTitle className="">
-          Sending money shouldn't cost the earth, so we built Wise to save you
+        <SubTitle className="max-w-[423px] w-full">
+          Sending money shouldn’t cost the earth, so we built Wise to save you
           money when you transfer and exchange internationally. We charge as
           little as possible: right now a tiny fee, eventually free.
         </SubTitle>
       </SendCalculator>
 
       <CardSection imgSrc="/images/card.jpg" imgAlt="Card in pocket">
-        <div className="">
-          <div className="">
+        <div className="max-w-[1133px] w-full mx-0">
+          <div className="max-w-[566px] w-full flex flex-col gap-8 ml-[8%]">
             <SectionTitle>
               The card that's always got the right currency
             </SectionTitle>
@@ -132,13 +133,13 @@ export default function Home() {
         flipped
         showCardImage
       >
-        <div className="">
-          <div className="">
+        <div className="ml-[17%]">
+          <div className="max-w-[816px] w-full flex flex-col gap-8 items-start">
             <SectionTitle>
               Boost your balance with our interest feature
             </SectionTitle>
 
-            <SubTitle className="">
+            <SubTitle className="max-w-[562px] w-full">
               Receive 4.13% APY on your USD balance when you opt-in to our
               interest feature. Instant access, so your money is available to
               you when you need it.
@@ -148,7 +149,7 @@ export default function Home() {
               linkable
               variant="btn-primary"
               url="#discover-interest"
-              className=""
+              className="items-start mb-10"
             >
               Discover interest feature
             </ButtonLink>
@@ -159,34 +160,34 @@ export default function Home() {
       <Perks />
 
       <Trusted>
-        <SectionTitle className="section-title-alt">
+        <SectionTitle className="section-title-alt mb-10">
           Trusted by businesses small and large
         </SectionTitle>
 
-        <div className="">
-          <div className="">
+        <div className="flex items-start gap-6">
+          <div className="max-w-[769px] w-full justify-self-end">
             <Image
               src="/images/cards-green.webp"
               alt="Green cards"
               width={769}
               height={528}
-              className=""
+              className="mt-[150px]"
             />
           </div>
 
-          <div className="">
+          <div className="flex-1 py-10 self-stretch">
             <SubTitle>
               Go global with the international business account. Pay employees,
               get paid and manage your cash flow in multiple currencies. Join
               over 300,000 businesses thriving with Wise.
             </SubTitle>
 
-            <ButtonGroup className="">
+            <ButtonGroup className="mt-6">
               <ButtonLink
                 linkable
                 variant="btn-inverted"
                 url="#open-business-account"
-                className=""
+                className="flex-1"
               >
                 Open a Business account
               </ButtonLink>
@@ -195,7 +196,7 @@ export default function Home() {
                 linkable
                 variant="btn-secondary"
                 url="#learn-more"
-                className=""
+                className="hover:bg-color-green-hover hover:border-color-green-hover hover:text-color-interactive-accent flex-1"
               >
                 Learn more
               </ButtonLink>

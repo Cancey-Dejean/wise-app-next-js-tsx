@@ -2,8 +2,8 @@ import { HeroProps } from "@/types"
 
 const Hero = ({ children }: HeroProps) => {
   return (
-    <section className="">
-      <div className="">{children}</div>
+    <section className="pt-[96px] text-center pb-10">
+      <div className="container">{children}</div>
     </section>
   )
 }

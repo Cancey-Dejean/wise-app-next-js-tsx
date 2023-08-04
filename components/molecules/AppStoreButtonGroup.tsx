@@ -14,11 +14,11 @@ const AppStoreButtonGroup = ({
   LogoTwoAlt,
 }: AppStoreButtonGroupProps) => {
   return (
-    <div className={classNames("", className || "")}>
+    <div className={classNames("flex gap-8 items-center", className || "")}>
       {LogoOne !== "" && (
         <Link href={LogoOneUrl || "#"}>
           <Image
-            className=""
+            className="h-[56px]"
             src={LogoOne || "https://placehold.jp/167x56.png"}
             alt={LogoOneAlt || "Alt Text Goes Here"}
             width={167}
@@ -30,8 +30,10 @@ const AppStoreButtonGroup = ({
       {LogoTwo !== "" && (
         <Link href={LogoTwoUrl || "/"}>
           <Image
-            className=""
+            className="h-[56px]"
             src={LogoTwo || "https://placehold.jp/189x56.png"}
+            // src="/images/play-store.svg"
+            // alt="Download from the Google Play Store"
             alt={LogoTwoAlt || "Alt Text Goes Here"}
             width={189}
             height={56}

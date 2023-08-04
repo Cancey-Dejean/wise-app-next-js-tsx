@@ -27,9 +27,17 @@ const ButtonLink = ({
   return linkable ? (
     <Link
       href={url}
-      className={classNames("btn", `${variant}`, `${size}`, className, {
-        ...props,
-      })}
+      className={classNames(
+        "btn",
+        `${variant}`,
+        `${size}`,
+        // variant === "primary" && "btn-primary",
+        // variant === "inverted" && "btn-inverted",
+        // variant === "inverted" && "btn-primary",
+        // size === "sm" ? "btn-size-sm" : "",
+        className,
+        { ...props }
+      )}
     >
       {children || <span>Linkable Button</span>}
     </Link>
@@ -37,9 +45,15 @@ const ButtonLink = ({
     <button
       type={btnType}
       onClick={onClick}
-      className={classNames("btn", `${variant}`, `${size}`, className, {
-        ...props,
-      })}
+      className={classNames(
+        "btn",
+        `${variant}`,
+        `${size}`,
+        // variant === "primary" ? "btn-primary" : "secondary",
+        // size === "sm" ? "btn-size-sm" : "btn-size-lg",
+        className,
+        { ...props }
+      )}
     >
       {children || <span>Button</span>}
     </button>

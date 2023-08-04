@@ -37,39 +37,51 @@
 
 @layer components {
   .section-title-alt {
+    @apply font-title !text-[126px] !leading-[107px] tracking-[0] text-color-interactive-primary uppercase;
   }
   .menu-link {
+    @apply rounded-full text-[15px] font-semibold leading-[24px] px-2 transition-all duration-15 hover:bg-color-neutral h-[32px];
   }
 
   .menu-link.cta {
+    @apply bg-color-interactive-accent border-color-interactive-accent border text-color-interactive-primary hover:bg-color-interactive-accent-hover px-4;
   }
 
   .btn {
+    @apply rounded-full py-[11px] px-[24px] font-semibold text-base tracking-[0.005em] border border-transparent bg-transparent  transition-all duration-15 ease-in-out inline-block text-center;
   }
 
   .btn-primary {
+    @apply bg-color-interactive-accent border-color-interactive-accent border text-color-interactive-primary hover:bg-color-interactive-accent-hover;
   }
 
   .btn-secondary {
+    @apply bg-transparent border-color-interactive-primary text-color-interactive-primary hover:bg-color-interactive-accent-hover hover:border-color-interactive-accent border;
   }
 
   .btn-inverted {
+    @apply bg-color-interactive-primary border-color-interactive-primary text-color-interactive-accent hover:bg-color-green-hover hover:border-color-green-hover border;
   }
 
   .btn-sm {
+    @apply py-[3px] !px-[16px] text-[15px] h-[32px];
   }
 
   .btn-lg {
+    @apply rounded-full py-[16px] px-[32px] text-[22px];
   }
 
   .card-primary {
+    @apply !bg-color-interactive-accent !text-color-interactive-primary;
   }
 
   .card-inverted {
+    @apply !bg-color-interactive-primary !text-color-interactive-accent;
   }
 }
 
 @layer utilities {
   .container {
+    @apply max-w-[1400px] w-full mx-auto px-8;
   }
 }

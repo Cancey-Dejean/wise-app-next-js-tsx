@@ -19,15 +19,25 @@ const IconTextRow = ({
   stacked = false,
 }: IconTextRowProps) => {
   return (
-    <div className={classNames("", stacked ? " " : "")}>
-      <div className="">{icon}</div>
+    <div
+      className={classNames(
+        "flex  gap-4  flex-1 ",
+        stacked ? " flex-col gap-4 items-start" : "items-center justify-center"
+      )}
+    >
+      <div className="p-3 bg-color-neutral rounded-full h-14 w-14 flex items-center justify-center">
+        {icon}
+      </div>
 
       {linkable ? (
-        <Link href={textUrl} className="">
+        <Link
+          href={textUrl}
+          className="font-semibold underline underline-offset-[4.8px]"
+        >
           {text}
         </Link>
       ) : (
-        <p className="">{text}</p>
+        <p className="font-semibold">{text}</p>
       )}
     </div>
   )

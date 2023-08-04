@@ -11,15 +11,19 @@ const CardSection = ({
   className = "",
 }: CardSectionProps) => {
   return (
-    <section className={` ${className}`}>
-      <div className={` ${flipped ? "" : ""}`}>
-        <div className="">
+    <section className={`py-[96px] ${className}`}>
+      <div
+        className={`container flex gap-10 ${
+          flipped ? "flex-col-reverse" : "flex-col"
+        }`}
+      >
+        <div className="relative">
           <Image
             src={imgSrc}
             width={1100}
             height={663}
             alt={imgAlt}
-            className=""
+            className="w-full"
           />
 
           {/* Optional Card Content */}

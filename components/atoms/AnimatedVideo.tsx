@@ -14,14 +14,14 @@ const AnimatedVideo = ({
   videoClasses,
 }: AnimatedVideoProps) => {
   return (
-    <div className={classNames("", className || "")}>
+    <div className={classNames("py-10", className || "")}>
       <video
         autoPlay
         loop
         muted
         playsInline
         poster={videoFallbackImage}
-        className={classNames("", videoClasses || "")}
+        className={classNames("max-w-full w-full h-auto", videoClasses || "")}
         src={videoUrl}
       />
     </div>

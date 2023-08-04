@@ -3,12 +3,12 @@ import { Calculator } from "./"
 
 const SendCalculator = ({ children }: SendCalculatorProps) => {
   return (
-    <section className="">
-      <div className="">
-        <div className="">{children}</div>
+    <section className="py-[154px] bg-color-interactive-accent">
+      <div className="container flex items-center">
+        <div className="flex-1 flex flex-col gap-8">{children}</div>
 
-        <div className="">
-          <div className="">
+        <div className="flex-1 relative">
+          <div className="max-w-[542px] w-full ml-auto">
             <Calculator />
           </div>
         </div>

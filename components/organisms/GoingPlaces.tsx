@@ -5,26 +5,34 @@ interface GoingPlacesProps {}
 
 const GoingPlaces = ({}: GoingPlacesProps) => {
   return (
-    <section className="">
-      <div className="">
-        <div className="">
-          <div className="">
-            <h2 className="">For people going places</h2>
+    <section className="py-[96px]">
+      <div className="overflow-hidden relative">
+        <div className="container absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="max-w-[652px] w-full flex flex-col  justify-stretch self-center">
+            <h2 className="font-title text-[96px] leading-[81px] mb-[92px]">
+              For people going places
+            </h2>
 
-            <div className="">
-              <button type="button" className="">
+            <div className="flex items-center gap-[26px]">
+              <button
+                type="button"
+                className="w-[78px] h-[78px] bg-color-neutral rounded-full flex items-center justify-center  opacity-[.45] grayscale-[1]"
+              >
                 <ArrowLeft />
               </button>
 
-              <button type="button" className="">
+              <button
+                type="button"
+                className="w-[78px] h-[78px] bg-color-neutral rounded-full flex items-center justify-center"
+              >
                 <ArrowRight />
               </button>
             </div>
           </div>
         </div>
 
-        <div className="">
-          <div className="">
+        <div className="w-1/2 ml-auto">
+          <div className="flex">
             <CardReview
               cardVariant="card-primary"
               btnVariant="btn-inverted"

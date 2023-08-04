@@ -15,6 +15,13 @@ export default function SectionTitle({
   const TagName = tag || "h1"
 
   return (
-    <TagName className={classNames("", className || "")}>{children}</TagName>
+    <TagName
+      className={classNames(
+        "text-[53px] leading-[57px]  tracking-[-1.59px] font-semibold",
+        className || ""
+      )}
+    >
+      {children}
+    </TagName>
   )
 }
