@@ -6,8 +6,8 @@ interface TrustedProps {
 
 const Trusted = ({ children }: TrustedProps) => {
   return (
-    <section className="bg-color-interactive-accent pt-[96px]">
-      <div className="container">{children}</div>
+    <section className="">
+      <div className="">{children}</div>
     </section>
   )
 }

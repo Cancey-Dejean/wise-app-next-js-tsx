@@ -5,11 +5,11 @@ interface PerksProps {}
 
 const Perks = ({}: PerksProps) => {
   return (
-    <div className="flex flex-col gap-10 pb-[96px]">
-      <div className="container flex  flex-col gap-10">
-        <hr className="w-full" />
+    <div className="">
+      <div className="">
+        <hr className="" />
 
-        <div className="flex items-center justify-between gap-8">
+        <div className="">
           <IconTextRow text="Licensed money transmitter" linkable />
           <IconTextRow
             text="We're registered with the Financial Crimes Enforcement Network (FinCEN) in the US"

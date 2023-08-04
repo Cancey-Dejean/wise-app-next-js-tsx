@@ -4,17 +4,15 @@ import { CardSection } from "./"
 import { ButtonLink, SectionTitle, SubTitle } from "../atoms"
 import Image from "next/image"
 
-const WithoutBorders = ({ children }: WithoutBordersProps) => {
+const WithoutBorders = () => {
   return (
-    <section className="py-[154px] bg-color-interactive-primary text-color-light-grey-2">
+    <section className="">
       <div className="container">
-        <h2 className="font-title text-[126px] text-color-interactive-accent leading-[107px] mb-[92px]">
-          Meet money without borders
-        </h2>
+        <h2 className="section-title-alt">Meet money without borders</h2>
 
-        <div className="mb-[32px]">
-          <div className="max-w-[656px] ml-auto">
-            <p className="text-[26px] leading-[32px] tracking-[-0.39px] font-semibold">
+        <div className="">
+          <div className="">
+            <p className="">
               Our dream is for people to live and work anywhere seamlessly. That
               means money without borders: moving it instantly, transparently,
               conveniently, and — eventually — for free.
@@ -25,10 +23,10 @@ const WithoutBorders = ({ children }: WithoutBordersProps) => {
         <CardSection
           imgSrc="/images/mission.jpg"
           imgAlt="Image in hand"
-          className="!p-0"
+          className=""
         >
-          <div className="flex items-center justify-between gap-[20px]">
-            <div className="flex flex-col max-w-[769px] mt-5">
+          <div className="">
+            <div className="">
               <SubTitle>
                 The Wise account is the universal way for you to manage money
                 internationally. It's made for the world. And it's built to save
@@ -42,8 +40,8 @@ const WithoutBorders = ({ children }: WithoutBordersProps) => {
           </div>
         </CardSection>
 
-        <div className="container flex items-center mt-[88px]">
-          <div className="max-w-[614px] w-full">
+        <div className="container">
+          <div className="">
             <Image
               src="/images/mission-section-2.jpg"
               alt="Two people smiling"
@@ -52,14 +50,14 @@ const WithoutBorders = ({ children }: WithoutBordersProps) => {
             />
           </div>
 
-          <div className="max-w-[566px] w-full ml-[100px] mr-auto flex flex-col items-start gap-10">
-            <SectionTitle className="text-color-interactive-accent">
+          <div className="">
+            <SectionTitle className="">
               Believe in an open
               <br />
               world
             </SectionTitle>
 
-            <SubTitle className="max-w-[542px] w-full">
+            <SubTitle className="">
               The world is richer when money has no borders. Your ideas fuel the
               Mission Roadmap that's getting us there — tell us what you want to
               see.
